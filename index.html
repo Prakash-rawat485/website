@@ -27,20 +27,19 @@
                               linear-gradient(to bottom, rgba(24, 34, 54, 0.3) 1px, transparent 1px);
         }
 
-        .project-card, .hobby-card {
+        .project-card, .dashboard-card, .hobby-card {
             background: rgba(17, 24, 39, 0.4);
             border: 1px solid rgba(31, 41, 55, 0.8);
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .project-card:hover, .hobby-card:hover {
+        .project-card:hover, .dashboard-card:hover, .hobby-card:hover {
             transform: translateY(-6px);
             background: rgba(17, 24, 39, 0.85);
             border-color: rgba(52, 211, 153, 0.4);
             box-shadow: 0 20px 40px -15px rgba(52, 211, 153, 0.08);
         }
 
-        /* Fretboard custom styling */
         .fret {
             border-right: 2px solid #334155;
             position: relative;
@@ -68,7 +67,8 @@
             </h1>
             <div class="space-x-8 hidden md:flex font-semibold text-slate-400 text-sm tracking-wide">
                 <a href="#about" class="hover:text-emerald-400 transition">About</a>
-                <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+                <a href="#projects" class="hover:text-emerald-400 transition">Code Studies</a>
+                <a href="#dashboards" class="hover:text-emerald-400 transition">BI Dashboards</a>
                 <a href="#sandbox" class="hover:text-emerald-400 transition">Sandbox</a>
                 <a href="#contact" class="hover:text-emerald-400 transition text-emerald-400">Hire Me</a>
             </div>
@@ -76,7 +76,7 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section (Updated with New Business Analytics Strategy Copy) -->
         <section id="about" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
@@ -88,7 +88,6 @@
                         Available for Data Opportunities
                     </div>
                     
-                    <!-- Option 1: Algorithmic & Creative Hook -->
                     <h2 class="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight leading-tight">
                         Turning Noise into Signals.<br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Metrics into Growth.</span>
@@ -119,39 +118,52 @@
                         <div class="space-y-2 text-slate-400">
                             <p class="text-emerald-400">&gt; const dataScientist = new Developer("Prakash Rawat");</p>
                             <p>&gt; dataScientist.coreSkills();</p>
-                            <p class="text-slate-500">=> ["Python", "SQL", "EDA", "Predictive Modeling", "Power BI"]</p>
+                            <p class="text-slate-500">=> ["Python", "SQL", "EDA", "Power BI", "DAX Metrics"]</p>
                             <p>&gt; dataScientist.status();</p>
-                            <p class="text-teal-400">=> "Actively exploring data strategy pipelines & insights"</p>
+                            <p class="text-teal-400">=> "Actively engineering corporate performance dashboards"</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="max-w-7xl mx-auto px-6 py-20">
+        <!-- Projects Section (Code Studies) -->
+        <section id="projects" class="max-w-7xl mx-auto px-6 py-16">
             <div class="mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 block mb-2">Portfolio</span>
-                <h2 class="text-3xl font-black text-white mb-4 tracking-tight">Case Studies</h2>
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 block mb-2">Core Scripts</span>
+                <h2 class="text-3xl font-black text-white mb-4 tracking-tight">Statistical Case Studies</h2>
                 <div class="h-1 w-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
             </div>
             
             <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Dynamically Injected -->
+                <!-- Dynamically Injected via JSON -->
             </div>
         </section>
 
-        <!-- Hobbies Section (The Sandbox Dashboard) -->
-        <section id="sandbox" class="max-w-7xl mx-auto px-6 py-20">
+        <!-- BI Dashboards Section -->
+        <section id="dashboards" class="max-w-7xl mx-auto px-6 py-16">
             <div class="mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-teal-400 block mb-2">Interests Matrix</span>
-                <h2 class="text-3xl font-black text-white mb-4 tracking-tight">Off-Duty Sandbox</h2>
-                <p class="text-slate-400 text-sm max-w-md">When I'm not parsing telemetry columns or optimizing algorithms, here are the tracks running in my background processes.</p>
+                <span class="text-xs font-bold uppercase tracking-widest text-teal-400 block mb-2">Interactive Architectures</span>
+                <h2 class="text-3xl font-black text-white mb-4 tracking-tight">Analytical Dashboards</h2>
+                <p class="text-slate-400 text-sm max-w-md">Click directly on any dashboard header to cross-examine telemetry insights and design frameworks live.</p>
                 <div class="h-1 w-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full mt-4"></div>
             </div>
 
+            <div id="dashboards-container" class="grid md:grid-cols-2 gap-8">
+                <!-- Dynamically Injected via JSON -->
+            </div>
+        </section>
+
+        <!-- Hobbies Section (Original Layout Unchanged) -->
+        <section id="sandbox" class="max-w-7xl mx-auto px-6 py-16">
+            <div class="mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 block mb-2">Interests Matrix</span>
+                <h2 class="text-3xl font-black text-white mb-4 tracking-tight">Off-Duty Sandbox</h2>
+                <div class="h-1 w-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
+            </div>
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Guitar Card with Custom Dynamic Blueprint Structure -->
+                <!-- Guitar Card -->
                 <div class="hobby-card rounded-2xl p-6 flex flex-col md:col-span-2">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -164,7 +176,6 @@
                     </div>
                     <p class="text-slate-400 text-xs leading-relaxed mb-6">Currently calibrating muscle memory for transition cleanups on advanced barre chords and chord structures.</p>
                     
-                    <!-- Code-engineered visual abstract fretboard schematic -->
                     <div class="mt-auto bg-slate-950/80 rounded-xl p-4 border border-slate-900/60 relative h-28 flex items-center overflow-hidden">
                         <div class="absolute inset-0 flex justify-between px-2">
                             <div class="fret h-full w-full"></div>
@@ -173,15 +184,8 @@
                             <div class="fret h-full w-full"></div>
                             <div class="fret h-full w-full"></div>
                         </div>
-                        <!-- Strings layers -->
-                        <div class="string top-4"></div>
-                        <div class="string top-8"></div>
-                        <div class="string top-12"></div>
-                        <div class="string top-16"></div>
-                        <div class="string top-20"></div>
-                        <div class="string top-24"></div>
+                        <div class="string top-4"></div><div class="string top-8"></div><div class="string top-12"></div><div class="string top-16"></div><div class="string top-20"></div><div class="string top-24"></div>
                         
-                        <!-- Visual representation of a chord marker node -->
                         <div class="absolute left-[30%] top-11 w-4 h-4 rounded-full bg-emerald-400 shadow-lg shadow-emerald-500/50 flex items-center justify-center text-[8px] font-black text-slate-950 animate-pulse">1</div>
                         <div class="absolute left-[50%] top-[74px] w-4 h-4 rounded-full bg-teal-400 shadow-lg shadow-teal-500/50 flex items-center justify-center text-[8px] font-black text-slate-950">2</div>
                     </div>
@@ -242,7 +246,6 @@
                     </div>
                     <p class="text-slate-400 text-xs leading-relaxed mb-4">Curating complex soundscapes and tracking production elements to maximize flow thresholds while writing algorithmic scripts.</p>
                     
-                    <!-- Dynamic structural music wave decoration -->
                     <div class="mt-auto flex items-end justify-between px-2 h-10 gap-1 bg-slate-950/40 p-2 rounded-xl border border-slate-900">
                         <div class="w-full bg-teal-500/40 h-[20%] rounded-sm"></div>
                         <div class="w-full bg-teal-400 h-[60%] rounded-sm"></div>
@@ -284,73 +287,77 @@
         &copy; 2026 Prakash Rawat &bull; Engineered with Tailwind Data Specs
     </footer>
 
+    <!-- Asynchronous JSON Processing Script -->
     <script>
-        const projectData = [
-            {
-                name: "Bank Churn Insights",
-                desc: "High-level statistical analysis of credit card customer attrition using financial behavioral patterns.",
-                tags: ["Python", "Finance", "EDA"],
-                link: "https://github.com/Prakash-rawat485/projects/tree/main/bank%20churn%20eda"
-            },
-            {
-                name: "Used Car Valuation",
-                desc: "Predictive study on vehicle depreciation markers and resale value optimization.",
-                tags: ["Python", "Automotive", "Regression"],
-                link: "https://github.com/Prakash-rawat485/projects/tree/main/Used_car_price_analysis"
-            },
-            {
-                name: "Zomato EDA",
-                desc: "Geospatial and sentiment analysis of restaurant performances in food-tech sectors.",
-                tags: ["Python", "Visualization", "Seaborn"],
-                link: "https://github.com/Prakash-rawat485/projects/tree/main/Zomato-EDA"
-            },
-            {
-                name: "Telecom Retention",
-                desc: "Identifying key risk factors in customer lifecycle for the telecommunication industry.",
-                tags: ["Python", "Churn", "Strategy"],
-                link: "https://github.com/Prakash-rawat485/projects/tree/main/telecome_churn"
-            },
-            {
-                name: "Diwali Sales Trend",
-                desc: "Market behavior analysis during high-volume festive seasons to optimize inventory.",
-                tags: ["Python", "Pandas", "Retail"],
-                link: "https://github.com/Prakash-rawat485/projects/tree/main/Diwali_sales_analysis"
-            },
-            {
-                name: "E-Commerce Analysis",
-                desc: "Deep dive into retail datasets to improve user engagement and sales conversion.",
-                tags: ["Python", "Marketing", "EDA"],
-                link: "https://github.com/Prakash-rawat485/projects/tree/main/ecommerce_churn"
-            }
-        ];
-
-        function renderProjects() {
-            const container = document.getElementById('projects-container');
-            container.innerHTML = projectData.map(p => `
-                <div class="rounded-2xl p-6 flex flex-col project-card backdrop-blur-sm">
-                    <div class="mb-5">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight">${p.name}</h3>
-                            <div class="p-2 bg-slate-900 border border-slate-800 rounded-lg text-emerald-400">
-                                <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+        async function loadPortfolioData() {
+            try {
+                // 1. Fetch and render Code Projects from projects.json
+                const projectsResponse = await fetch('projects.json');
+                const projectData = await projectsResponse.json();
+                
+                const projectsContainer = document.getElementById('projects-container');
+                projectsContainer.innerHTML = projectData.map(p => `
+                    <div class="rounded-2xl p-6 flex flex-col project-card backdrop-blur-sm">
+                        <div class="mb-5">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-lg font-bold text-white tracking-tight">${p.name}</h3>
+                                <div class="p-2 bg-slate-900 border border-slate-800 rounded-lg text-emerald-400">
+                                    <i data-lucide="code-2" class="w-4 h-4"></i>
+                                </div>
                             </div>
+                            <p class="text-slate-400 text-xs leading-relaxed font-medium">${p.desc}</p>
                         </div>
-                        <p class="text-slate-400 text-xs leading-relaxed font-medium">${p.desc}</p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            ${p.tags.map(t => `<span class="px-2.5 py-0.5 bg-slate-950 border border-slate-800/80 text-emerald-400 text-[10px] font-mono rounded-md tracking-wide">${t}</span>`).join('')}
+                        </div>
+                        <div class="mt-auto pt-4 border-t border-slate-800/60">
+                            <a href="${p.link}" target="_blank" class="text-xs font-bold text-slate-300 flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
+                                Explore Repository <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="flex flex-wrap gap-1.5 mb-6">
-                        ${p.tags.map(t => `<span class="px-2.5 py-0.5 bg-slate-950 border border-slate-800/80 text-emerald-400 text-[10px] font-mono rounded-md tracking-wide">${t}</span>`).join('')}
+                `).join('');
+
+                // 2. Fetch and render BI Dashboards from dashboards.json
+                const dashboardsResponse = await fetch('dashboards.json');
+                const dashboardData = await dashboardsResponse.json();
+                
+                const dashboardsContainer = document.getElementById('dashboards-container');
+                dashboardsContainer.innerHTML = dashboardData.map(d => `
+                    <div class="rounded-2xl p-6 flex flex-col dashboard-card backdrop-blur-sm group">
+                        <div class="mb-5">
+                            <div class="flex justify-between items-start mb-3">
+                                <a href="${d.link}" target="_blank" class="block group-hover:text-teal-400 transition-colors">
+                                    <h3 class="text-xl font-bold text-white tracking-tight flex items-center gap-2 group-hover:text-teal-400 transition-colors">
+                                        ${d.name} <i data-lucide="external-link" class="w-4 h-4 opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                                    </h3>
+                                </a>
+                                <div class="p-2 bg-slate-900 border border-slate-800 rounded-lg text-teal-400">
+                                    <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 text-xs leading-relaxed font-medium">${d.desc}</p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            ${d.tags.map(t => `<span class="px-2.5 py-0.5 bg-slate-950 border border-slate-800/80 text-teal-400 text-[10px] font-mono rounded-md tracking-wide">${t}</span>`).join('')}
+                        </div>
+                        <div class="mt-auto pt-4 border-t border-slate-800/60">
+                            <a href="${d.link}" target="_blank" class="text-xs font-bold text-slate-300 flex items-center gap-1.5 hover:text-teal-400 transition-colors">
+                                Launch Dynamic View <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="mt-auto pt-4 border-t border-slate-800/60">
-                        <a href="${p.link}" target="_blank" class="text-xs font-bold text-slate-300 flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-                            Explore Project <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-                        </a>
-                    </div>
-                </div>
-            `).join('');
-            lucide.createIcons();
+                `).join('');
+
+                // Trigger icons rendering
+                lucide.createIcons();
+
+            } catch (error) {
+                console.error("Error pipeline parsing JSON profiles:", error);
+            }
         }
 
-        document.addEventListener('DOMContentLoaded', renderProjects);
+        document.addEventListener('DOMContentLoaded', loadPortfolioData);
     </script>
 </body>
 </html>
