@@ -114,12 +114,12 @@
             </div>
         </section>
 
-        <!-- Dynamic Analytical Dashboards Section (Fetches dashboard.json) -->
+        <!-- Dynamic Analytical Dashboards Section (Fetches dashboards.json) -->
         <section id="dashboards" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-900">
             <div class="mb-12">
                 <span class="text-xs font-bold uppercase tracking-widest text-teal-400 block mb-2">Business Intelligence</span>
                 <h2 class="text-3xl font-black text-white mb-4 tracking-tight">Analytical Dashboards</h2>
-                <div class="h-1 w-12 bg-gradient-to-r from-teal-400 to-emerald-400 rounded-full"></div>
+                <div class="h-1 w-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full"></div>
             </div>
 
             <div id="dashboards-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -156,7 +156,7 @@
     </footer>
 
     <script>
-        // Inline Array for Case Studies (Kept consistent with your codebase parameters)
+        // Inline Array for Case Studies
         const projectData = [
             {
                 name: "Bank Churn Insights",
@@ -196,7 +196,6 @@
             }
         ];
 
-        // Core compilation layer to process data metrics interface
         function renderProjects() {
             const container = document.getElementById('projects-container');
             container.innerHTML = projectData.map(p => `
@@ -222,30 +221,33 @@
             `).join('');
         }
 
-        // Fetch Pipeline to map dashboard.json array structures smoothly 
+        // Updated Fetch Pipeline mapping your specific dashboards.json schema structure directly
         async function fetchDashboards() {
             try {
                 const response = await fetch('dashboards.json');
                 if (!response.ok) throw new Error('Network file parameters unreadable.');
-                const dashboardData = await response.json();
+                const data = await response.json();
                 
+                // Targets the "dashboards" array wrapper from your file layout
+                const dashboardArray = data.dashboards; 
                 const container = document.getElementById('dashboards-container');
-                container.innerHTML = dashboardData.map(d => `
+                
+                container.innerHTML = dashboardArray.map(d => `
                     <div class="rounded-2xl p-6 flex flex-col data-card backdrop-blur-sm group">
                         <div class="mb-5">
                             <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg font-bold text-white group-hover:text-teal-400 transition-colors tracking-tight">${d.name}</h3>
+                                <h3 class="text-lg font-bold text-white group-hover:text-teal-400 transition-colors tracking-tight">${d.title}</h3>
                                 <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg text-teal-400 shadow-inner">
                                     <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
                                 </div>
                             </div>
-                            <p class="text-slate-400 text-xs leading-relaxed font-medium">${d.desc}</p>
+                            <p class="text-slate-400 text-xs leading-relaxed font-medium">${d.description}</p>
                         </div>
                         <div class="flex flex-wrap gap-1.5 mb-6">
-                            ${d.tags.map(t => `<span class="px-2.5 py-0.5 bg-slate-950/80 border border-slate-800/60 text-teal-400 text-[10px] font-mono rounded-md tracking-wide">${t}</span>`).join('')}
+                            ${d.tags.slice(0, 3).map(t => `<span class="px-2.5 py-0.5 bg-slate-950/80 border border-slate-800/60 text-teal-400 text-[10px] font-mono rounded-md tracking-wide">${t}</span>`).join('')}
                         </div>
                         <div class="mt-auto pt-4 border-t border-slate-800/40">
-                            <a href="${d.link}" target="_blank" class="text-xs font-bold text-slate-400 flex items-center gap-1.5 hover:text-teal-400 transition-colors">
+                            <a href="${d.github_url}" target="_blank" class="text-xs font-bold text-slate-400 flex items-center gap-1.5 hover:text-teal-400 transition-colors">
                                 Open Dashboard <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                             </a>
                         </div>
@@ -254,7 +256,6 @@
                 
             } catch (error) {
                 console.warn("Dashboard runtime tracking exception:", error);
-                // Graceful fallback UI configuration state
                 document.getElementById('dashboards-container').innerHTML = `
                     <p class="text-sm font-mono text-slate-500 col-span-full text-center py-4">
                         Pending dashboards runtime sync via dashboards.json file array.
@@ -263,7 +264,6 @@
             }
         }
 
-        // Global Orchestration Initialization Lifecycle Hook
         document.addEventListener('DOMContentLoaded', async () => {
             renderProjects();
             await fetchDashboards();
