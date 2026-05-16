@@ -3,217 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prakash Rawat | Data Science Portfolio</title>
-    <!-- Tailwind CSS Script -->
+    <title>Prakash Rawat | Data Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        darkBg: '#050505',
-                        cardBg: '#0f172a',
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Custom subtle glowing grid background effect */
-        .grid-bg {
-            background-size: 40px 40px;
-            background-image: linear-gradient(to right, rgba(15, 23, 42, 0.4) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(15, 23, 42, 0.4) 1px, transparent 1px);
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #030712;
+        }
+
+        /* Modern interactive glass navbar */
+        .glass-nav {
+            background: rgba(3, 7, 18, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(31, 41, 55, 0.7);
+        }
+
+        /* Ambient subtle data grid mesh overlay */
+        .grid-mesh {
+            background-size: 32px 32px;
+            background-image: linear-gradient(to right, rgba(24, 34, 54, 0.3) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(24, 34, 54, 0.3) 1px, transparent 1px);
+        }
+
+        /* High-tech dashboard project card effects */
+        .project-card {
+            background: rgba(17, 24, 39, 0.4);
+            border: 1px solid rgba(31, 41, 55, 0.8);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            background: rgba(17, 24, 39, 0.85);
+            border-color: rgba(52, 211, 153, 0.4);
+            box-shadow: 0 20px 40px -15px rgba(52, 211, 153, 0.08);
         }
     </style>
 </head>
-<body class="bg-darkBg text-slate-100 font-sans antialiased grid-bg relative min-h-screen">
+<body class="text-slate-300 antialiased grid-mesh min-h-screen relative">
 
-    <!-- Ambient background glow points -->
-    <div class="fixed top-0 left-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="fixed bottom-10 right-10 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Radial Decorative Light Flares -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-1/3 left-10 w-[400px] h-[400px] bg-teal-500/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-    <!-- 1. NAVIGATION FIXED SIDEBAR -->
-    <aside class="fixed top-0 left-0 h-screen w-64 bg-slate-950/80 backdrop-blur-md border-r border-slate-900 flex flex-col justify-between p-6 z-50">
-        <div>
-            <!-- Profile Info Header -->
-            <div class="flex flex-col items-center text-center pb-6 border-b border-slate-900">
-                <div class="w-20 h-20 rounded-full border-2 border-teal-400 p-1 mb-3 overflow-hidden bg-slate-800 flex items-center justify-center">
-                    <img src="image.jpg" alt="Prakash Rawat" class="w-full h-full object-cover rounded-full" onerror="this.src='https://via.placeholder.com/150'">
-                </div>
-                <h1 class="text-lg font-bold tracking-tight text-white">Prakash Rawat</h1>
-                <p class="text-xs text-teal-400 font-medium">Data Science Student</p>
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 glass-nav">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold tracking-tight text-white">
+                <span class="text-emerald-400">Prakash</span>Rawat<span class="text-emerald-400">.</span>
+            </h1>
+            <div class="space-x-8 hidden md:flex font-semibold text-slate-400 text-sm tracking-wide">
+                <a href="#about" class="hover:text-emerald-400 transition">About</a>
+                <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+                <a href="#contact" class="hover:text-emerald-400 transition text-emerald-400">Hire Me</a>
             </div>
+        </nav>
+    </header>
 
-            <!-- Navigation Links -->
-            <nav class="mt-8 space-y-2">
-                <a href="#about" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium rounded-lg text-slate-300 hover:text-teal-400 hover:bg-slate-900/60 transition-all duration-200">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                    About Profile
-                </a>
-                <a href="#projects" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium rounded-lg text-slate-300 hover:text-teal-400 hover:bg-slate-900/60 transition-all duration-200">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
-                    Data Projects
-                </a>
-                <a href="#contact" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium rounded-lg text-slate-300 hover:text-teal-400 hover:bg-slate-900/60 transition-all duration-200">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L22 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    Initialize Contact
-                </a>
-            </nav>
-        </div>
-
-        <!-- Sidebar Footer / Social Shortcuts Links -->
-        <div class="flex items-center justify-around pt-4 border-t border-slate-900 text-xs font-mono">
-            <a href="https://github.com/Prakash-rawat485" target="_blank" class="text-slate-400 hover:text-teal-400 transition-colors">GitHub</a>
-            <span class="text-slate-800">|</span>
-            <a href="https://www.linkedin.com/in/prakash-rawat-5b169b331/" target="_blank" class="text-slate-400 hover:text-teal-400 transition-colors">LinkedIn</a>
-        </div>
-    </aside>
-
-    <!-- MAIN SCROLLABLE CONTENT WINDOW -->
-    <main class="ml-64 p-8 md:p-16 max-w-6xl relative z-10 space-y-32">
-
-        <!-- 2. HERO & ABOUT ME -->
-        <section id="about" class="scroll-mt-24">
-            <span class="text-xs font-semibold tracking-widest text-teal-400 uppercase bg-teal-400/10 px-3 py-1 rounded-full">Data Science & Analytics</span>
-            <h2 class="text-4xl md:text-5xl font-black text-white mt-4 tracking-tight">
-                Transforming Raw Data into <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Predictive Strategy</span>.
-            </h2>
-            <p class="mt-6 text-slate-400 text-lg leading-relaxed max-w-3xl">
-                I am a focused Data Science student crafting an analytical engine powered by Python, SQL, and advanced visual telemetry. My passion lies in breaking down structural patterns, analyzing data behaviors, and communicating analytical narratives cleanly through robust production pipelines.
-            </p>
-
-            <!-- Metrics Highlight Dashboard -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12 max-w-2xl">
-                <div class="bg-cardBg/40 border border-slate-900 hover:border-teal-500/30 transition-colors p-5 rounded-xl">
-                    <span class="text-xs text-slate-500 uppercase tracking-wider block">Data Scope Explored</span>
-                    <span class="text-2xl font-bold text-white mt-1 block">50k+ Rows</span>
-                    <span class="text-xs text-teal-400/70 mt-2 block">← Active EDA datasets</span>
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-800/50 text-emerald-400 text-xs font-semibold tracking-wider mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+                        </span>
+                        Available for Data Opportunities
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
+                        Solving business problems with <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Data.</span>
+                    </h2>
+                    <p class="text-lg text-slate-400 leading-relaxed mb-10 max-w-lg">
+                        Data Science specialist focused on <span class="font-semibold text-white border-b border-slate-800 pb-0.5">EDA</span>, <span class="font-semibold text-white border-b border-slate-800 pb-0.5">Churn Prediction</span>, and <span class="font-semibold text-white border-b border-slate-800 pb-0.5">Market Analysis</span>. Transforming raw numbers into strategic growth.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="px-8 py-4 bg-white text-slate-950 rounded-2xl shadow-xl hover:bg-slate-200 transition-all font-bold flex items-center gap-2 text-sm">
+                            View Work <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/prakash-rawat-5b169b331/" target="_blank" class="px-8 py-4 bg-slate-900/80 border border-slate-800 text-slate-200 rounded-2xl hover:bg-slate-800 hover:border-slate-700 transition-all font-bold flex items-center gap-2 text-sm">
+                            <i data-lucide="linkedin" class="w-4 h-4 text-emerald-400"></i> LinkedIn
+                        </a>
+                    </div>
                 </div>
-                <div class="bg-cardBg/40 border border-slate-900 hover:border-teal-500/30 transition-colors p-5 rounded-xl">
-                    <span class="text-xs text-slate-500 uppercase tracking-wider block">Production Dashboards</span>
-                    <span class="text-2xl font-bold text-white mt-1 block">3 Active</span>
-                    <span class="text-xs text-teal-400/70 mt-2 block">← Power BI deployments</span>
+                <div class="relative flex justify-center">
+                    <div class="absolute -inset-1.5 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-[2.5rem] rotate-3 opacity-20 blur-lg"></div>
+                    <img src="image.jpg" alt="Prakash Rawat" class="relative w-full max-w-sm rounded-[2.2rem] shadow-2xl border border-slate-800/80 object-cover" onerror="this.src='https://via.placeholder.com/400'">
                 </div>
             </div>
         </section>
 
-        <!-- 3. DATA PROJECTS SHOWCASE -->
-        <section id="projects" class="scroll-mt-24">
-            <h3 class="text-2xl font-bold text-white tracking-tight border-b border-slate-900 pb-4 mb-8 flex items-center gap-2">
-                <span class="text-teal-400">01.</span> Portfolio Dashboards & Projects
-            </h3>
-
-            <!-- Projects Target Container (Loaded via projects.json) -->
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Fallback Loading State -->
-                <div id="projects-loader" class="text-sm font-mono text-slate-500 col-span-2 py-8">
-                    Parsing dynamic target projects.json array...
-                </div>
+        <!-- Projects Section -->
+        <section id="projects" class="max-w-7xl mx-auto px-6 py-20">
+            <div class="mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 block mb-2">Portfolio</span>
+                <h2 class="text-3xl font-black text-white mb-4 tracking-tight">Case Studies</h2>
+                <div class="h-1 w-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
             </div>
-        </section>
-
-        <!-- 4. CONTACT ENDPOINT -->
-        <section id="contact" class="scroll-mt-24 pb-20">
-            <h3 class="text-2xl font-bold text-white tracking-tight border-b border-slate-900 pb-4 mb-8 flex items-center gap-2">
-                <span class="text-teal-400">02.</span> Initialize Contact
-            </h3>
             
-            <!-- Grid Layout containing separate interactive route cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl">
-                
-                <!-- Contact Card: Phone -->
-                <a href="tel:+918279338375" class="bg-cardBg/40 border border-slate-900 hover:border-teal-500/40 p-5 rounded-xl flex items-center justify-between group transition-all duration-300">
-                    <div>
-                        <span class="text-xs font-mono text-teal-400 uppercase tracking-wider block">💬 DIRECT_LINE</span>
-                        <span class="text-base font-bold text-white mt-1 block group-hover:text-teal-300 transition-colors">+91 8279338375</span>
-                    </div>
-                    <svg class="w-5 h-5 text-slate-600 group-hover:text-teal-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                </a>
-
-                <!-- Contact Card: Email -->
-                <a href="mailto:pr400733@gmail.com" class="bg-cardBg/40 border border-slate-900 hover:border-teal-500/40 p-5 rounded-xl flex items-center justify-between group transition-all duration-300">
-                    <div>
-                        <span class="text-xs font-mono text-teal-400 uppercase tracking-wider block">📬 INBOX_ROUTE</span>
-                        <span class="text-base font-bold text-white mt-1 block group-hover:text-teal-300 transition-colors">pr400733@gmail.com</span>
-                    </div>
-                    <svg class="w-5 h-5 text-slate-600 group-hover:text-teal-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L22 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                </a>
-
-                <!-- Contact Card: LinkedIn -->
-                <a href="https://www.linkedin.com/in/prakash-rawat-5b169b331/" target="_blank" class="bg-cardBg/40 border border-slate-900 hover:border-teal-500/40 p-5 rounded-xl flex items-center justify-between group transition-all duration-300">
-                    <div>
-                        <span class="text-xs font-mono text-teal-400 uppercase tracking-wider block">🔗 LINKEDIN</span>
-                        <span class="text-base font-bold text-white mt-1 block group-hover:text-teal-300 transition-colors">prakash-rawat</span>
-                    </div>
-                    <svg class="w-5 h-5 text-slate-600 group-hover:text-teal-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                </a>
-
-                <!-- Contact Card: GitHub -->
-                <a href="https://github.com/Prakash-rawat485" target="_blank" class="bg-cardBg/40 border border-slate-900 hover:border-teal-500/40 p-5 rounded-xl flex items-center justify-between group transition-all duration-300">
-                    <div>
-                        <span class="text-xs font-mono text-teal-400 uppercase tracking-wider block">💻 GITHUB</span>
-                        <span class="text-base font-bold text-white mt-1 block group-hover:text-teal-300 transition-colors">Prakash-rawat485</span>
-                    </div>
-                    <svg class="w-5 h-5 text-slate-600 group-hover:text-teal-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                </a>
-
+            <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Projects dynamically injected via JavaScript -->
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section id="contact" class="max-w-7xl mx-auto px-6 py-24">
+            <div class="bg-gradient-to-b from-slate-900 to-slate-950/40 border border-slate-800/80 rounded-[2.5rem] p-10 md:p-16 text-center text-white relative overflow-hidden">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-emerald-500/5 blur-[120px] pointer-events-none"></div>
+                <h2 class="text-4xl font-black mb-6 tracking-tight">Start a Data Project.</h2>
+                <p class="text-slate-400 mb-10 max-w-xl mx-auto text-base leading-relaxed">
+                    Ready to turn your data metrics into interactive strategy insights? Connect directly with my route configurations below.
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-4 relative z-10">
+                    <a href="mailto:pr400733@gmail.com" class="flex items-center gap-2.5 px-6 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-xl transition-all font-bold text-sm shadow-lg shadow-emerald-500/10">
+                        <i data-lucide="mail" class="w-4 h-4"></i> pr400733@gmail.com
+                    </a>
+                    <a href="tel:+918279338375" class="flex items-center gap-2.5 px-6 py-3.5 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-xl transition-all font-bold text-sm text-slate-200">
+                        <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i> +91 8279338375
+                    </a>
+                    <a href="https://www.linkedin.com/in/prakash-rawat-5b169b331/" target="_blank" class="flex items-center gap-2.5 px-6 py-3.5 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-xl transition-all font-bold text-sm text-slate-200">
+                        <i data-lucide="linkedin" class="w-4 h-4 text-emerald-400"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- DYNAMIC PROJECT LOADER SCRIPT -->
+    <footer class="text-center py-12 text-slate-600 text-xs font-mono tracking-wider border-t border-slate-900/60 mt-12">
+        &copy; 2026 Prakash Rawat &bull; Engineered with Tailwind Data Specs
+    </footer>
+
     <script>
-        async function loadProjects() {
-            const gridContainer = document.getElementById('projects-grid');
-            
-            try {
-                const response = await fetch('projects.json');
-                if (!response.ok) throw new Error('Failed to load projects.json payload.');
-                
-                const projects = await response.json();
-                
-                // Construct cards cleanly via data schema mapping
-                const projectCardsHTML = projects.map(project => {
-                    // Fallback safeguards to prevent 'undefined' values if headers vary in json setup
-                    const headerType = project.type || project.heading || "Data Project";
-                    
-                    // Generate configuration tags layout
-                    const tagsHTML = project.tags ? project.tags.map(tag => 
-                        `<span class="text-xs px-2.5 py-1 bg-slate-900 text-slate-400 rounded-md font-mono">${tag}</span>`
-                    ).join('') : '';
-
-                    return `
-                        <a href="${project.url || '#'}" target="_blank" class="bg-cardBg/40 border border-slate-900 rounded-xl overflow-hidden hover:border-teal-400/40 hover:-translate-y-1 transition-all duration-300 group block">
-                            <div class="p-6">
-                                <div class="flex items-center justify-between mb-4">
-                                    <span class="text-xs font-mono text-teal-400 font-semibold tracking-wider uppercase">${headerType}</span>
-                                    <svg class="w-5 h-5 text-slate-500 group-hover:text-teal-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                </div>
-                                <h4 class="text-xl font-bold text-white group-hover:text-teal-300 transition-colors">${project.title || 'Untitled Project'}</h4>
-                                <p class="text-slate-400 text-sm mt-3 leading-relaxed">${project.description || ''}</p>
-                                <div class="flex flex-wrap gap-2 mt-6">
-                                    ${tagsHTML}
-                                </div>
-                            </div>
-                        </a>
-                    `;
-                }).join('');
-
-                gridContainer.innerHTML = projectCardsHTML;
-
-            } catch (error) {
-                console.error(error);
-                document.getElementById('projects-loader').innerHTML = `
-                    <span class="text-rose-500">Pipeline Error: Unable to fetch local array file template. Ensure projects.json is present in the root folder.</span>
-                `;
+        const projectData = [
+            {
+                name: "Bank Churn Insights",
+                desc: "High-level statistical analysis of credit card customer attrition using financial behavioral patterns.",
+                tags: ["Python", "Finance", "EDA"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/bank%20churn%20eda"
+            },
+            {
+                name: "Used Car Valuation",
+                desc: "Predictive study on vehicle depreciation markers and resale value optimization.",
+                tags: ["Python", "Automotive", "Regression"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/Used_car_price_analysis"
+            },
+            {
+                name: "Zomato EDA",
+                desc: "Geospatial and sentiment analysis of restaurant performances in food-tech sectors.",
+                tags: ["Python", "Visualization", "Seaborn"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/Zomato-EDA"
+            },
+            {
+                name: "Telecom Retention",
+                desc: "Identifying key risk factors in customer lifecycle for the telecommunication industry.",
+                tags: ["Python", "Churn", "Strategy"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/telecome_churn"
+            },
+            {
+                name: "Diwali Sales Trend",
+                desc: "Market behavior analysis during high-volume festive seasons to optimize inventory.",
+                tags: ["Python", "Pandas", "Retail"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/Diwali_sales_analysis"
+            },
+            {
+                name: "E-Commerce Analysis",
+                desc: "Deep dive into retail datasets to improve user engagement and sales conversion.",
+                tags: ["Python", "Marketing", "EDA"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/ecommerce_churn"
             }
+        ];
+
+        function renderProjects() {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = projectData.map(p => `
+                <div class="rounded-2xl p-6 flex flex-col project-card backdrop-blur-sm">
+                    <div class="mb-5">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight">${p.name}</h3>
+                            <div class="p-2 bg-slate-900 border border-slate-800 rounded-lg text-emerald-400">
+                                <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 text-xs leading-relaxed font-medium">${p.desc}</p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        ${p.tags.map(t => `<span class="px-2.5 py-0.5 bg-slate-950 border border-slate-800/80 text-emerald-400 text-[10px] font-mono rounded-md tracking-wide">${t}</span>`).join('')}
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-slate-800/60">
+                        <a href="${p.link}" target="_blank" class="text-xs font-bold text-slate-300 flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
+                            Explore Project <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+            lucide.createIcons();
         }
 
-        document.addEventListener('DOMContentLoaded', loadProjects);
+        document.addEventListener('DOMContentLoaded', renderProjects);
     </script>
-
 </body>
 </html>
