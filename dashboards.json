@@ -1,0 +1,36 @@
+{
+  "dashboards": [
+    {
+      "id": 1,
+      "title": "Hospitality Domain Dashboard",
+      "description": "A Power BI dashboard analyzing hospitality data to track occupancy rates, revenue trends, and customer demographics.",
+      "github_url": "https://github.com/Prakash-rawat485/Powerbi-projects/tree/main/Hospitaliy_dashboard",
+      "thumbnail": "",
+      "tags": ["Power BI", "Hospitality", "Data Visualization", "Business Intelligence"]
+    },
+    {
+      "id": 2,
+      "title": "Bank Churn Dashboard",
+      "description": "A Power BI dashboard analyzing bank customer churn data to identify key factors causing customer attrition, such as poor service and credit card usage patterns.",
+      "github_url": "https://github.com/Prakash-rawat485/Powerbi-projects/tree/main/bank%20churn%20dashboard",
+      "thumbnail": "",
+      "tags": ["Power BI", "Banking", "Churn Analysis", "Data Insights"]
+    },
+    {
+      "id": 3,
+      "title": "Facebook Dashboard",
+      "description": "A Power BI dashboard analyzing Facebook data to track engagement metrics, user demographics, and post performance.",
+      "github_url": "https://github.com/Prakash-rawat485/Powerbi-projects/tree/main/facebook_dashboard",
+      "thumbnail": "",
+      "tags": ["Power BI", "Social Media", "Engagement Analysis", "Data Visualization"]
+    },
+    {
+      "id": 4,
+      "title": "Netflix Dashboard",
+      "description": "A Power BI dashboard analyzing Netflix data to explore trends in viewership, popular genres, and user behavior.",
+      "github_url": "https://github.com/Prakash-rawat485/Powerbi-projects/tree/main/netflix_dashboard",
+      "thumbnail": "",
+      "tags": ["Power BI", "Entertainment", "Viewership Analysis", "Trends"]
+    }
+  ]
+}
