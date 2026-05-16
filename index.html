@@ -7,66 +7,68 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
         
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             background-color: #030712;
         }
 
-        /* Modern interactive glass navbar */
+        /* Premium interactive glass navbar */
         .glass-nav {
             background: rgba(3, 7, 18, 0.75);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(31, 41, 55, 0.7);
+            border-bottom: 1px solid rgba(31, 41, 55, 0.4);
         }
 
-        /* Ambient subtle data grid mesh overlay */
+        /* Ambient high-tech data mesh background grid */
         .grid-mesh {
-            background-size: 32px 32px;
-            background-image: linear-gradient(to right, rgba(24, 34, 54, 0.3) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(24, 34, 54, 0.3) 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
         }
 
-        /* High-tech dashboard project card effects */
-        .project-card, .dashboard-card {
-            background: rgba(17, 24, 39, 0.4);
-            border: 1px solid rgba(31, 41, 55, 0.8);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        /* Advanced Data Card Micro-interactions */
+        .data-card {
+            background: linear-gradient(180deg, rgba(17, 24, 39, 0.4) 0%, rgba(11, 17, 30, 0.6) 100%);
+            border: 1px solid rgba(31, 41, 55, 0.6);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .project-card:hover, .dashboard-card:hover {
-            transform: translateY(-6px);
-            background: rgba(17, 24, 39, 0.85);
-            border-color: rgba(52, 211, 153, 0.4);
-            box-shadow: 0 20px 40px -15px rgba(52, 211, 153, 0.08);
+        .data-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            background: linear-gradient(180deg, rgba(17, 24, 39, 0.7) 0%, rgba(11, 17, 30, 0.9) 100%);
+            border-color: rgba(16, 185, 129, 0.4);
+            box-shadow: 0 30px 60px -15px rgba(16, 185, 129, 0.08), 
+                        0 0 0 1px rgba(16, 185, 129, 0.1) inset;
         }
     </style>
 </head>
 <body class="text-slate-300 antialiased grid-mesh min-h-screen relative">
 
-    <!-- Radial Decorative Light Flares -->
-    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
-    <div class="absolute top-1/3 left-10 w-[400px] h-[400px] bg-teal-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+    <!-- Atmospheric Deep-Field Radial Light Filters -->
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-1/3 left-[-100px] w-[500px] h-[500px] bg-teal-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-[-100px] w-[500px] h-[500px] bg-emerald-600/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <!-- Navbar -->
+    <!-- Header Navigation -->
     <header class="sticky top-0 z-50 glass-nav">
         <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-extrabold tracking-tight text-white">
-                <span class="text-emerald-400">Prakash</span>Rawat<span class="text-emerald-400">.</span>
+            <h1 class="text-2xl font-black tracking-tight text-white">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Prakash</span>Rawat<span class="text-emerald-400">.</span>
             </h1>
             <div class="space-x-8 hidden md:flex font-semibold text-slate-400 text-sm tracking-wide">
-                <a href="#about" class="hover:text-emerald-400 transition">About</a>
-                <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
-                <a href="#dashboards" class="hover:text-emerald-400 transition">Dashboards</a>
-                <a href="#contact" class="hover:text-emerald-400 transition text-emerald-400">Hire Me</a>
+                <a href="#about" class="hover:text-emerald-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-emerald-400 transition-colors">Case Studies</a>
+                <a href="#dashboards" class="hover:text-emerald-400 transition-colors">Dashboards</a>
+                <a href="#contact" class="px-4 py-1.5 rounded-lg bg-emerald-950/40 border border-emerald-800/60 text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 transition-all">Hire Me</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Modern Hero Showcase -->
         <section id="about" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
@@ -84,7 +86,7 @@
                         Data Science specialist focused on <span class="font-semibold text-white border-b border-slate-800 pb-0.5">EDA</span>, <span class="font-semibold text-white border-b border-slate-800 pb-0.5">Churn Prediction</span>, and <span class="font-semibold text-white border-b border-slate-800 pb-0.5">Market Analysis</span>. Transforming raw numbers into strategic growth.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#projects" class="px-8 py-4 bg-white text-slate-950 rounded-2xl shadow-xl hover:bg-slate-200 transition-all font-bold flex items-center gap-2 text-sm">
+                        <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 rounded-2xl shadow-xl shadow-emerald-500/10 hover:opacity-90 transition-all font-bold flex items-center gap-2 text-sm">
                             View Work <i data-lucide="arrow-down" class="w-4 h-4"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/prakash-rawat-5b169b331/" target="_blank" class="px-8 py-4 bg-slate-900/80 border border-slate-800 text-slate-200 rounded-2xl hover:bg-slate-800 hover:border-slate-700 transition-all font-bold flex items-center gap-2 text-sm">
@@ -93,49 +95,49 @@
                     </div>
                 </div>
                 <div class="relative flex justify-center">
-                    <div class="absolute -inset-1.5 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-[2.5rem] rotate-3 opacity-20 blur-lg"></div>
+                    <div class="absolute -inset-2 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-[2.5rem] rotate-3 opacity-20 blur-xl"></div>
                     <img src="image.jpg" alt="Prakash Rawat" class="relative w-full max-w-sm rounded-[2.2rem] shadow-2xl border border-slate-800/80 object-cover" onerror="this.src='https://via.placeholder.com/400'">
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="max-w-7xl mx-auto px-6 py-20">
+        <!-- Static Data Science Case Studies Section -->
+        <section id="projects" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-900">
             <div class="mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 block mb-2">Portfolio</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 block mb-2">Portfolio Analytics</span>
                 <h2 class="text-3xl font-black text-white mb-4 tracking-tight">Case Studies</h2>
-                <div class="h-1 w-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
+                <div class="h-1 w-12 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full"></div>
             </div>
             
             <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Projects dynamically injected via JavaScript -->
+                <!-- Data Pipeline Injects Static Projects Array Here -->
             </div>
         </section>
 
-        <!-- BI Dashboards Section -->
-        <section id="dashboards" class="max-w-7xl mx-auto px-6 py-20">
+        <!-- Dynamic Analytical Dashboards Section (Fetches dashboard.json) -->
+        <section id="dashboards" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-900">
             <div class="mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-teal-400 block mb-2">Interactive Visuals</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-teal-400 block mb-2">Business Intelligence</span>
                 <h2 class="text-3xl font-black text-white mb-4 tracking-tight">Analytical Dashboards</h2>
-                <div class="h-1 w-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full"></div>
+                <div class="h-1 w-12 bg-gradient-to-r from-teal-400 to-emerald-400 rounded-full"></div>
             </div>
 
             <div id="dashboards-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Dashboards dynamically injected via JavaScript -->
+                <!-- Dynamic Content Pipeline Target for dashboards.json -->
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Premium Conversion / Contact Panel -->
         <section id="contact" class="max-w-7xl mx-auto px-6 py-24">
-            <div class="bg-gradient-to-b from-slate-900 to-slate-950/40 border border-slate-800/80 rounded-[2.5rem] p-10 md:p-16 text-center text-white relative overflow-hidden">
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-emerald-500/5 blur-[120px] pointer-events-none"></div>
+            <div class="bg-gradient-to-b from-slate-900/60 to-slate-950/40 border border-slate-800/80 rounded-[2.5rem] p-10 md:p-16 text-center text-white relative overflow-hidden backdrop-blur-sm">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-emerald-500/10 blur-[120px] pointer-events-none"></div>
                 <h2 class="text-4xl font-black mb-6 tracking-tight">Start a Data Project.</h2>
                 <p class="text-slate-400 mb-10 max-w-xl mx-auto text-base leading-relaxed">
-                    Ready to turn your data metrics into interactive strategy insights? Connect directly with my route configurations below.
+                    Ready to turn complex operational metrics into clear, interactive deployment strategy pipelines? Let's connect.
                 </p>
                 
                 <div class="flex flex-wrap justify-center gap-4 relative z-10">
-                    <a href="mailto:pr400733@gmail.com" class="flex items-center gap-2.5 px-6 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-xl transition-all font-bold text-sm shadow-lg shadow-emerald-500/10">
+                    <a href="mailto:pr400733@gmail.com" class="flex items-center gap-2.5 px-6 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-xl transition-all font-bold text-sm shadow-lg shadow-emerald-500/20">
                         <i data-lucide="mail" class="w-4 h-4"></i> pr400733@gmail.com
                     </a>
                     <a href="tel:+918279338375" class="flex items-center gap-2.5 px-6 py-3.5 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-xl transition-all font-bold text-sm text-slate-200">
@@ -150,80 +152,123 @@
     </main>
 
     <footer class="text-center py-12 text-slate-600 text-xs font-mono tracking-wider border-t border-slate-900/60 mt-12">
-        &copy; 2026 Prakash Rawat &bull; Engineered with Tailwind Data Specs
+        &copy; 2026 Prakash Rawat &bull; Professional Data Science Portfolio
     </footer>
 
-    <!-- Asynchronous JSON Parsing & Loading Pipelines -->
     <script>
-        async function loadPortfolioData() {
-            try {
-                // 1. Fetch and render Code Projects from projects.json
-                const projectsResponse = await fetch('projects.json');
-                const projectData = await projectsResponse.json();
-                
-                const projectsContainer = document.getElementById('projects-container');
-                projectsContainer.innerHTML = projectData.map(p => `
-                    <div class="rounded-2xl p-6 flex flex-col project-card backdrop-blur-sm group">
-                        <div class="mb-5">
-                            <div class="flex justify-between items-start mb-3">
-                                <a href="${p.link}" target="_blank" class="block">
-                                    <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight">${p.name}</h3>
-                                </a>
-                                <div class="p-2 bg-slate-900 border border-slate-800 rounded-lg text-emerald-400">
-                                    <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
-                                </div>
-                            </div>
-                            <p class="text-slate-400 text-xs leading-relaxed font-medium">${p.desc}</p>
-                        </div>
-                        <div class="flex flex-wrap gap-1.5 mb-6">
-                            ${p.tags.map(t => `<span class="px-2.5 py-0.5 bg-slate-950 border border-slate-800/80 text-emerald-400 text-[10px] font-mono rounded-md tracking-wide">${t}</span>`).join('')}
-                        </div>
-                        <div class="mt-auto pt-4 border-t border-slate-800/60">
-                            <a href="${p.link}" target="_blank" class="text-xs font-bold text-slate-300 flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-                                Explore Project <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-                            </a>
-                        </div>
-                    </div>
-                `).join('');
+        // Inline Array for Case Studies (Kept consistent with your codebase parameters)
+        const projectData = [
+            {
+                name: "Bank Churn Insights",
+                desc: "High-level statistical analysis of credit card customer attrition using financial behavioral patterns.",
+                tags: ["Python", "Finance", "EDA"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/bank%20churn%20eda"
+            },
+            {
+                name: "Used Car Valuation",
+                desc: "Predictive study on vehicle depreciation markers and resale value optimization.",
+                tags: ["Python", "Automotive", "Regression"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/Used_car_price_analysis"
+            },
+            {
+                name: "Zomato EDA",
+                desc: "Geospatial and sentiment analysis of restaurant performances in food-tech sectors.",
+                tags: ["Python", "Visualization", "Seaborn"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/Zomato-EDA"
+            },
+            {
+                name: "Telecom Retention",
+                desc: "Identifying key risk factors in customer lifecycle for the telecommunication industry.",
+                tags: ["Python", "Churn", "Strategy"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/telecome_churn"
+            },
+            {
+                name: "Diwali Sales Trend",
+                desc: "Market behavior analysis during high-volume festive seasons to optimize inventory.",
+                tags: ["Python", "Pandas", "Retail"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/Diwali_sales_analysis"
+            },
+            {
+                name: "E-Commerce Analysis",
+                desc: "Deep dive into retail datasets to improve user engagement and sales conversion.",
+                tags: ["Python", "Marketing", "EDA"],
+                link: "https://github.com/Prakash-rawat485/projects/tree/main/ecommerce_churn"
+            }
+        ];
 
-                // 2. Fetch and render BI Dashboards from dashboards.json
-                const dashboardsResponse = await fetch('dashboards.json');
-                const dashboardData = await dashboardsResponse.json();
+        // Core compilation layer to process data metrics interface
+        function renderProjects() {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = projectData.map(p => `
+                <div class="rounded-2xl p-6 flex flex-col data-card backdrop-blur-sm group">
+                    <div class="mb-5">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight">${p.name}</h3>
+                            <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg text-emerald-400 shadow-inner">
+                                <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 text-xs leading-relaxed font-medium">${p.desc}</p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        ${p.tags.map(t => `<span class="px-2.5 py-0.5 bg-slate-950/80 border border-slate-800/60 text-emerald-400 text-[10px] font-mono rounded-md tracking-wide">${t}</span>`).join('')}
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-slate-800/40">
+                        <a href="${p.link}" target="_blank" class="text-xs font-bold text-slate-400 flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
+                            Explore Project <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Fetch Pipeline to map dashboard.json array structures smoothly 
+        async function fetchDashboards() {
+            try {
+                const response = await fetch('dashboards.json');
+                if (!response.ok) throw new Error('Network file parameters unreadable.');
+                const dashboardData = await response.json();
                 
-                const dashboardsContainer = document.getElementById('dashboards-container');
-                dashboardsContainer.innerHTML = dashboardData.map(d => `
-                    <div class="rounded-2xl p-6 flex flex-col dashboard-card backdrop-blur-sm group">
+                const container = document.getElementById('dashboards-container');
+                container.innerHTML = dashboardData.map(d => `
+                    <div class="rounded-2xl p-6 flex flex-col data-card backdrop-blur-sm group">
                         <div class="mb-5">
                             <div class="flex justify-between items-start mb-3">
-                                <a href="${d.link}" target="_blank" class="block">
-                                    <h3 class="text-lg font-bold text-white group-hover:text-teal-400 transition-colors tracking-tight">${d.name}</h3>
-                                </a>
-                                <div class="p-2 bg-slate-900 border border-slate-800 rounded-lg text-teal-400">
+                                <h3 class="text-lg font-bold text-white group-hover:text-teal-400 transition-colors tracking-tight">${d.name}</h3>
+                                <div class="p-2 bg-slate-950 border border-slate-800 rounded-lg text-teal-400 shadow-inner">
                                     <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
                                 </div>
                             </div>
                             <p class="text-slate-400 text-xs leading-relaxed font-medium">${d.desc}</p>
                         </div>
                         <div class="flex flex-wrap gap-1.5 mb-6">
-                            ${d.tags.map(t => `<span class="px-2.5 py-0.5 bg-slate-950 border border-slate-800/80 text-teal-400 text-[10px] font-mono rounded-md tracking-wide">${t}</span>`).join('')}
+                            ${d.tags.map(t => `<span class="px-2.5 py-0.5 bg-slate-950/80 border border-slate-800/60 text-teal-400 text-[10px] font-mono rounded-md tracking-wide">${t}</span>`).join('')}
                         </div>
-                        <div class="mt-auto pt-4 border-t border-slate-800/60">
-                            <a href="${d.link}" target="_blank" class="text-xs font-bold text-slate-300 flex items-center gap-1.5 hover:text-teal-400 transition-colors">
-                                Launch View <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        <div class="mt-auto pt-4 border-t border-slate-800/40">
+                            <a href="${d.link}" target="_blank" class="text-xs font-bold text-slate-400 flex items-center gap-1.5 hover:text-teal-400 transition-colors">
+                                Open Dashboard <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                             </a>
                         </div>
                     </div>
                 `).join('');
-
-                // Trigger lucide icon generation on dynamically rendered nodes
-                lucide.createIcons();
-
+                
             } catch (error) {
-                console.error("Error loading dynamic data targets:", error);
+                console.warn("Dashboard runtime tracking exception:", error);
+                // Graceful fallback UI configuration state
+                document.getElementById('dashboards-container').innerHTML = `
+                    <p class="text-sm font-mono text-slate-500 col-span-full text-center py-4">
+                        Pending dashboards runtime sync via dashboards.json file array.
+                    </p>
+                `;
             }
         }
 
-        document.addEventListener('DOMContentLoaded', loadPortfolioData);
+        // Global Orchestration Initialization Lifecycle Hook
+        document.addEventListener('DOMContentLoaded', async () => {
+            renderProjects();
+            await fetchDashboards();
+            lucide.createIcons();
+        });
     </script>
 </body>
 </html>
