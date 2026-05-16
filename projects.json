@@ -1,1 +1,51 @@
 
+[
+  {
+    "name": "Diwali Sales Analysis",
+    "description": "An end-to-end EDA identifying consumer behavior and sales trends during India's largest festive season. Analyzed demographics and purchasing power to provide inventory optimization insights.",
+    "link": "https://github.com/Prakash-rawat485/projects/tree/main/Diwali_sales_analysis",
+    "tags": ["Python", "Sales Analysis", "Pandas", "Matplotlib"]
+  },
+  {
+    "name": "Zomato Data Analysis",
+    "description": "Explored restaurant performance and customer preferences across various cities. Analyzed rating distributions, price ranges, and cuisine popularity to understand the food-tech ecosystem.",
+    "link": "https://github.com/Prakash-rawat485/projects/tree/main/Zomato-EDA",
+    "tags": ["Python", "EDA", "Geospatial Analysis", "Seaborn"]
+  },
+  {
+    "name": "Telecom Churn Analysis",
+    "description": "Investigated customer attrition patterns in the telecommunications industry. Identified key drivers of churn such as contract types and monthly charges to improve retention strategies.",
+    "link": "https://github.com/Prakash-rawat485/projects/tree/main/telecome_churn",
+    "tags": ["Python", "Customer Retention", "Predictive EDA"]
+  },
+  {
+    "name": "Bank Churn Insights",
+    "description": "Analyzed credit card customer data to predict attrition. Focused on financial behaviors like revolving balances and transaction counts to segment high-risk customers.",
+    "link": "https://github.com/Prakash-rawat485/projects/tree/main/bank%20churn%20eda",
+    "tags": ["Python", "Finance", "Statistical Modeling"]
+  },
+  {
+    "name": "Used Car Price Analysis",
+    "description": "A comprehensive study on vehicle depreciation. Identified how mileage, fuel type, and brand impact resale value, providing a data-driven approach to car valuation.",
+    "link": "https://github.com/Prakash-rawat485/projects/tree/main/Used_car_price_analysis",
+    "tags": ["Python", "Regression Trends", "Automotive Data"]
+  },
+  {
+    "name": "E-Commerce Churn EDA",
+    "description": "Deep-dive into online retail customer behavior. Analyzed login patterns, device usage, and satisfaction scores to pinpoint why customers stop shopping on the platform.",
+    "link": "https://github.com/Prakash-rawat485/projects/tree/main/ecommerce_churn",
+    "tags": ["Python", "E-Commerce", "Data Cleaning"]
+  },
+  {
+    "name": "Loan Prediction Analysis",
+    "description": "Evaluated risk factors for loan applicants. This EDA focuses on identifying the correlation between income, credit history, and loan approval status.",
+    "link": "https://github.com/Prakash-rawat485/projects/tree/main/Loan%20prediction%20EDA",
+    "tags": ["Python", "Risk Assessment", "Feature Engineering"]
+  },
+  {
+    "name": "Facebook Thailand Engagement",
+    "description": "Analyzed social media engagement patterns in the Thai market. Studied reaction types and post timing to determine what drives maximum interaction on Facebook.",
+    "link": "https://github.com/Prakash-rawat485/projects/tree/main/facebook_thailand%20analysis",
+    "tags": ["Python", "Social Media", "Sentiment Analysis"]
+  }
+]
